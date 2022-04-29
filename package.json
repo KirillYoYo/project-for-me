@@ -4,7 +4,8 @@
   "description": "non",
   "main": "index.js",
   "scripts": {
-    "test": "test",
+    "test": "eslint src",
+    "fix": "eslint src --fix",
     "dev": "webpack serve --mode development --config ./config/webpack.dev.config.js"
   },
   "author": "me",
@@ -15,6 +16,12 @@
     "@babel/preset-react": "^7.16.7",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
+    "eslint": "^8.14.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.29.4",
     "html-webpack-plugin": "^5.5.0",
     "sass": "^1.51.0",
     "sass-loader": "^12.6.0",
