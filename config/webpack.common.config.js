@@ -10,8 +10,23 @@ module.exports = {
         path: path.resolve(ROOT, 'dist'),
     },
 
+    resolve: {
+        extensions: [".ts", ".tsx", ".js"]
+    },
+
     module: {
         rules: [
+            { test: /\.tsx?$/, loader: "ts-loader" },
+            {
+                test: /\.m?js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env', "@babel/preset-react"]
+                    }
+                }
+            },
             {
                 test: /\.s[ac]ss$/i,
                 use: [
@@ -29,7 +44,9 @@ module.exports = {
     plugins: ([
         new HtmlWebpackPlugin({
             title: 'web app here',
-            scriptLoading: 'defer'
+            scriptLoading: 'defer',
+            template: './index.html',
+            filename: 'index.html',
         })
     ]),
 };

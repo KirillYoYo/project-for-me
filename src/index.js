@@ -1,3 +1,7 @@
+import React from 'react'
 import './style/style.scss'
+import {App} from './components/App'
+import {createRoot} from 'react-dom/client'
 
-console.log('Hey', )
+const root = createRoot(document.getElementById('root'))
+root.render(<App />)
