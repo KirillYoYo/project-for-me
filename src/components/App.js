@@ -1,7 +1,15 @@
 import React from 'react'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import Nodes from './Nodes/Nodes'
 
 export const App = () => {
     return (
-        <div>Hello</div>
+        <Router>
+            <Link to="/about">L</Link>
+            <Routes>
+                <Nodes />
+                <Route path="*" element={<div>No content</div>}></Route>
+            </Routes>
+        </Router>
     )
 }
