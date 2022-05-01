@@ -5,9 +5,8 @@ import Nodes from './Nodes/Nodes'
 export const App = () => {
     return (
         <Router>
-            <Link to="/about">L</Link>
+            <Nodes />
             <Routes>
-                <Nodes />
                 <Route path="*" element={<div>No content</div>}></Route>
             </Routes>
         </Router>
