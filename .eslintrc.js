@@ -18,6 +18,10 @@ module.exports = {
     'react'
   ],
   rules: {
+    "padded-blocks": "off",
+    "object-curly-spacing": "off",
+    "space-before-function-paren": "off",
+    "react/prop-types": 0,
     "indent": [
       "error",
       4
